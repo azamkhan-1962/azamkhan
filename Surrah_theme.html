@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {
+	background-color: rgb(73, 248, 190);
+	font-family: Comic Sans MS;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(16, 88, 34);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+font-weight: bold;
+
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 2px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: rgb(250, 243, 233);
+  color: rgb(65, 4, 207);
+  padding: 5px 20px;
+  width: 100%;
+  border: 1px solid #8f8e8e;
+  outline: 1px solid #ccc;
+  text-align: left;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(221, 185, 126);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #8f8e8e;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  color: #4770f5;
+  padding: 0px 14px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 390px;
+  display: none;
+  background-color: rgb(214, 236, 236);
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 850px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.footer {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(250, 188, 118);
+  color: rgb(10, 30, 53);
+  text-align: center;
+  font-size: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Surrah Theme</h1>
+    
+  </div>
+  
+</div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<p><em><strong>"In the name of Allah, the Beneficent, the Merciful."</em></strong>   <br> Move the mouse over a button inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفاتحة')">سورة الفاتحة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة البقرة')">سورة البقرة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة آل عمرآن')">سورة آل عمرآن</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة آلنساء')">سورة آلنساء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الماءدة')">سورة الماءدة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الانمام')">سورة الانمام</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الاعراف')">سورة الاعراف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الانفال')">سورة الانفال</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الاتوبة')">سورة الاتوبة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة يونس')">سورة يونس</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة هود')">سورة هود</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة يوسف')">سورة يوسف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الرعد')">سورة الرعد</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة ابراهيم')">سورة ابراهيم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحجر')">سورة الحجر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النحل')">سورة النحل</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الاسراء')">سورة الاسراء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الكهف')">سورة الكهف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة مريم')">سورة مريم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة طه')">سورة طه</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الانبياء')">سورة الانبياء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحج')">سورة الحج</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المومنون')">سورة المومنون</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النور')">سورة النور</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفرقان')">سورة الفرقان</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الشعراء')">سورة الشعراء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النمل')">سورة النمل</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القصص')">سورة القصص</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة العنكبوت')">سورة العنكبوت</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الروم')">سورة الروم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة لقمان')">سورة لقمان</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة السجدة')">سورة السجدة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الاحزاب')">سورة الاحزاب</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة سباء')">سورة سباء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة فاطر')">سورة فاطر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة يٰسٰن')">سورة يٰسٰن</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الصافٰات')">سورة الصافٰات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة ص')">سورة ص</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الزمر')">سورة الزمر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة غافر')">سورة غافر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة فصّلت')">سورة فصّلت</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الشوريٰ')">سورة الشوريٰ</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الزّخرف')">سورة الزّخرف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الدّخان')">سورة الدّخان</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الجاثية')">سورة الجاثية</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأحقاف')">سورة الأحقاف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة محمّد')">سورة محمّد</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفتح')">سورة الفتح</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحجرات')">سورة الحجرات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة قٰ')">سورة قٰ</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الذّاريٰات')">سورة الذّاريٰات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الطّور')">سورة الطّور</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النّجم')">سورة النّجم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القمر')">سورة القمر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الرّحمٰن')">سورة الرّحمٰن</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الوٰقعة')">سورة الوٰقعة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحديد')">سورة الحديد</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المجادلة')">سورة المجادلة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحشر')">سورة الحشر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الممتحنة')">سورة الممتحنة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الصّف')">سورة الصّف</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الجمعة')">سورة الجمعة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المنافقون')">سورة المنافقون</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة التّغابن')">سورة التّغابن</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الطّلٰاق')">سورة الطّلٰاق</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة التّحريم')">سورة التّحريم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الملك')">سورة الملك</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القلم')">سورة القلم</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الحاقّة')">سورة الحاقّة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المعارٰج')">سورة المعارٰج</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة نوح')">سورة نوح</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الجنّ')">سورة الجنّ</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المزّمّل')">سورة المزّمّل</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المدّثّر')">سورة المدّثّر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القيمة')">سورة القيمة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الانسان')">سورة الانسان</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المرسلات')">سورة المرسلات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النّباء')">سورة النّباء</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النّازعات')">سورة النّازعات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة عبس')">سورة عبس</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة التّكوير')">سورة التّكوير</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأنفطار')">سورة الأنفطار</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المطفّفين')">سورة المطفّفين</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأنشقاق')">سورة الأنشقاق</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة البروج')">سورة البروج</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الّطٰارق')">سورة الّطٰارق</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأعلي')">سورة الأعلي</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الغٰاشية')">سورة الغٰاشية</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفجر')">سورة الفجر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة البلد')">سورة البلد</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الشّمس')">سورة الشّمس</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة اللّيل')">سورة اللّيل</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الّضحٰي')">سورة الّضحٰي</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأنشراح')">سورة الأنشراح</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة التّين')">سورة التّين</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة العلق')">سورة العلق</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القدر')">سورة القدر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة البيّنة')">سورة البيّنة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الزّلزلة')">سورة الزّلزلة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة العاديات')">سورة العاديات</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة القارعة')">سورة القارعة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة التّكاثر')">سورة التّكاثر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة العصر')">سورة العصر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الهمزة')">سورة الهمزة</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفيل')">سورة الفيل</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة قريش')">سورة قريش</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الماعون')">سورة الماعون</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الكوثر')">سورة الكوثر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الكافرون')">سورة الكافرون</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النّصر')">سورة النّصر</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة المسد')">سورة المسد</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الأخلاٰص')">سورة الأخلاٰص</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة الفلق')">سورة الفلق</button>
+  <button class="tablinks" onmouseover="openSurrah(event, 'سورة النّاٰس')">سورة النّاٰس</button>
+<br>
+<br>
+</div>
+</div>
+
+
+<div id="سورة الفاتحة"class="tabcontent">
+  <h3>سورة الفاتحة</h3>
+  <p>Surah Al-Fatiha, often referred to as “The Opening Chapter”, is fundamental in Islamic worship. It serves as a cornerstone in daily prayers. This Surah is a heartfelt expression of praise to God and a plea for His guidance. The Surah is both a Du’a (prayer) and an introduction of the Qur’an.  It teaches the basic principles of Islamic faith. All praise and thanks are for Allah who is the Lord of all the worlds. Allah is most merciful and most compassionate. Allah is also the Master of the Day of Judgment.  We should pray to Allah only and we should seek His help.  We seek His guidance and help to walk on the straight path.  This is the path of those who received Allah’s favors, not the path of those who incurred His anger or who went astray. <br> <br> 
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 1 <br>
+    •	Order by Revelation: 5 <br>
+    •	No of Ruku`: 1   <br>
+    •	Number of Verses: 7  <br>
+    </p>
+</div>
+
+<div id="سورة البقرة" class="tabcontent">
+  <h3>سورة البقرة</h3>
+  <p>Surah Al-Baqarah, the second chapter of the Quran, is the longest Surah. It delves into various aspects of guidance, faith, and patience, offering valuable insights into the moral and ethical principles that should guide a Muslim’s life. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 2 <br>
+    •	Order by Revelation: 87 <br>
+    •	Number of Ruku`:  40 <br>
+    •	Number of Verses: 286
+    </p> 
+</div>
+
+<div id="سورة آل عمرآن" class="tabcontent">
+  <h3>سورة آل عمرآن</h3>
+  <p>Surah Al-Imran continues the narrative from Surah Al-Baqarah, emphasizing the importance of learning from the past and maintaining faith, even in the face of challenges. Al ‘Imran means “the family of ‘Imran”, which includes Maryam (Mary), the mother of Prophet Isa (Jesus). Imran was the father of Prophets Musa and Haroon -peace be upon them. There are references in this Surah to these two great Prophets of Allah and then the story of Mary and birth of Jesus is mentioned. 
+	The main topics of this Surah are Tawhid, Prophethood and the truth of the Qur’ an.  As Surah al-Baqarah discussed the issues related to Bani Israel, this Surah discusses some issues related to the Christian community and their religious positions.  It also discusses the subjects of Hajj, Jihad, Zakat and Riba. It ends, like Surah al-Baqarah, with a du’a. <br> <br>
+  •	City of Revelation: <strong>Medina</strong> <br>
+  •	Order in Quran: 3 <br>
+  •	Order by Revelation: 89 <br>
+  •	Number of Ruku`:  20 <br>
+  •	Number of Verses: 200
+  </p>
+</div>
+
+<div id="سورة آلنساء" class="tabcontent">
+	<h3>سورة آلنساء</h3>
+	<p>Surah An-Nisa addresses crucial issues related to women’s rights, family life, and social justice. It provides guidance on matters like marriage, divorce, inheritance, and the treatment of women, emphasizing the importance of equity and compassion. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 4 <br>
+    •	Order by Revelation: 92 <br>
+    •	Number of Ruku`:  24 <br>
+    •	Number of Verses: 176
+    </p>
+  </div>
+
+  <div id="سورة الماءدة" class="tabcontent">
+	<h3>سورة الماءدة</h3>
+	<p><em>Surah Al-Maidah</em>, addresses dietary laws and the importance of adhering to God’s guidance in matters of food and drink. It also emphasizes justice, unity, and the importance of upholding agreements. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 5 <br>
+    •	Order by Revelation: 112 <br>
+    •	Number of Ruku`:  16 <br>
+    •	Number of Verses: 120
+    </p>
+  </div>
+
+  <div id="سورة الانمام" class="tabcontent">
+ 	<h3>سورة الانمام</h3>
+	<p><em>Surah Al-Inaam</em>, It contains basic principles of Tawhid.  It gives beautiful description of Allah’s creative power.  It criticizes Shirk and its manifestations. Basic topics discussed here are: Surah Al-An’am invites readers to contemplate the natural world and the signs of God’s existence and power evident in creation. It encourages reflection on the purpose of life and the importance of heeding divine guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 6 <br>
+    •	Order by Revelation: 55 <br>
+    •	Number of Ruku`:  20 <br>
+    •	Number of Verses: 165
+    </p>
+	</div>
+
+	<div id="سورة الاعراف" class="tabcontent">
+		<h3>سورة الاعراف</h3>
+		<p><em>Surah Al-Araf</em>, The basic theme of this Surah is Risalah, i.e. Allah’s message as it was sent through many messengers. Several Prophets and parts of their stories are mentioned to emphasize Prophets’ mission and their struggle with their people.  The Surah tells us that Allah’s Prophets suffered for the cause of truth. Their enemies tried to harm them, but then Allah helped his prophets and defeated their enemies.  The Surah emphasizes that the true message must be presented under all circumstances. After the Prophets it is the duty of the Believers to convey the message of Allah to all people. Surah Al-A’raf delves into moral and ethical matters, offering guidance and warnings. It narrates stories of past prophets and communities, illustrating the consequences of their actions and choices. <br> <br>
+      •	City of Revelation: <Strong>Mecca</Strong> <br>
+      •	Order in Quran: 7 <br>
+      •	Order by Revelation: 39 <br>
+      •	Number of Ruku`:  24 <br>
+      •	Number of Verses: 206
+      </p>
+	</div>
+
+	<div id="سورة الانفال" class="tabcontent">
+		<h3>سورة الانفال</h3>
+		<p><em>Surah Al-Anfal</em>, The Surah reminds the Believers to obey Allah and His Messenger and keep their relations good with each other.  It has given rules of war and peace between Muslims and their enemies.  In this Surah, six times Allah has addressed Muslims with “O you who believe” (see vss. 15; 20; 24; 28; 29; 46). Surah Al-Anfal recounts the events of the Battle of Badr and provides lessons on justice and ethical conduct during times of conflict. It also addresses matters related to war booty and the distribution of resources. <br> <br>
+      •	City of Revelation: <strong>Medina</strong> <br>
+      •	Order in Quran: 8 <br>
+      •	Order by Revelation: 88 <br>
+      •	Number of Ruku`:  10 <br>
+      •	Number of Verses: 75
+      </p>
+		</div>
+
+	<div id="سورة الاتوبة" class="tabcontent">
+		<h3>سورة الاتوبة</h3>
+		<p><em>Surah Al-Tawba</em>, The basic subjects of the Surah are: The non-believers who broke their treaties, Muslims have no obligation to honor treaties with them.  Muslims must protect themselves from hypocrisy, weak faith and negligence. Battle of Tabuk and its lessons. Surah At-Tawbah underscores the significance of repentance and seeking God’s forgiveness. It also addresses relationships with non-Muslims and the importance of upholding agreements. <br> <br>
+      •	City of Revelation: <strong>Medina</strong> <br>
+      •	Order in Quran: 9 <br>
+      •	Order by Revelation: 113 <br>
+      •	Number of Ruku`:  16 <br>
+      •	Number of Verses: 129
+      </p>
+		</div>
+
+	<div id="سورة يونس"	class="tabcontent">
+		<h3>سورة يونس</h3>
+		<p><em>Surah Yunus</em>, The main subject of this Surah is faith in Allah and belief in the Hereafter.  Those who have true faith, they worship Allah and recognize Him as their Lord and Master and live their lives in accordance to His command.  Allah sent His Messengers to remind people and to warn them.  The stories of Prophets Noah and Prophet Moses with Pharaoh are told to remind people about the consequences of unfaithfulness and arrogance. Surah Yunus tells the story of Prophet Jonah (Yunus) and draws lessons on faith, perseverance, and reliance on God, even in the most challenging circumstances. <br> <br>
+      •	City of Revelation: <Strong>Mecca</Strong> <br>
+      •	Order in Quran: 10 <br>
+      •	Order by Revelation: 51 <br>
+      •	Number of Ruku`:  11 <br>
+      •	Number of Verses: 109
+      </p>
+	</div>
+
+<div id="سورة هود" class="tabcontent">
+	<h3>سورة هود</h3>
+	<p><em>Surah Hud</em>, In this Surah we have the stories of Prophets Noah, Salih, Hud, Lot, Shuaib and Moses -peace be upon them all. The basic point is that Allah sent His Prophets and Messengers to mankind out of His grace and mercy, but when people did not listen to the Prophets and rejected their message then Allah’s punishment came and came relentlessly. It did not make any difference whether someone was the son of a Prophet or his wife or any one, none could escape Allah’s judgment. It emphasizes the importance of heeding divine guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 11 <br>
+    •	Order by Revelation: 52 <br>
+    •	Number of Ruku`:  10<br>
+    •	Number of Verses: 123
+    </p>
+</div>
+
+<div id="سورة يوسف" class="tabcontent">
+	<h3>سورة يوسف</h3>
+	<p><em>Surah Yusuf</em>, The basic theme of the Surah is to emphasize that all Prophets were human beings and their messages were similar. They were also highly moral beings. This is the way all believers should be.  The Prophets trusted in Allah and in the end Allah’s plans did succeed. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 12 <br>
+    •	Order by Revelation: 53 <br>
+    •	Number of Ruku`:  12 <br>
+    •	Number of Verses: 111
+    </p>
+</div>
+
+<div id="سورة الرعد" class="tabcontent">
+  <h3>سورة الرعد</h3>
+  <p><em>Surah Al-Rad</em>, The basic theme of the Surah is divine guidance.  Allah has created this whole universe. He knows what is in the wombs and every thing is under His knowledge.  He sent His prophets and guides to all people for their guidance and now the Last Messenger has come. Surah Ar-Ra’d invites readers to ponder the natural world and the signs of God’s existence and power evident in creation. It underscores the profound connection between nature and divine revelation. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 13 <br>
+    •	Order by Revelation: 96 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 43
+    </p>
+</div>
+
+<div id="سورة ابراهيم" class="tabcontent">
+  <h3>سورة ابراهيم</h3>
+  <p><em>Surah Ibrahim</em>, The basic theme of the Surah is Allah’s guidance through His prophets.  The purpose of this guidance is to take the people from darkness to light.  Many people in the past had doubts about their prophets. They laughed at them and they threatened to kill them or expel them from their towns. However, the lasting word is the “good word.” The Surah also mentions Prophet Ibrahim’s prayer when he established the city of Makkah. Surah Ibrahim highlights the importance of monotheism and worshiping the One God. It narrates the stories of Prophet Abraham (Ibrahim) and his unwavering call to monotheism. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong><br>
+    •	Order in Quran: 14 <br>
+    •	Order by Revelation: 72 <br>
+    •	Number of Ruku`:  7 <br>
+    •	Number of Verses: 52
+    </p>
+</div>
+
+<div id="سورة الحجر" class="tabcontent">
+  <h3>سورة الحجر</h3>
+  <p><em>Surah Al-Hijr</em>, The main theme of the Surah is divine guidance, and people’s response.  Allah’s warns those who deny this message and as a reminder of these warnings, we have here the stories of Prophet Lot’s people, Thamud and other groups. Surah Al-Hijr emphasizes the consequences faced by those who rejected the messages of the prophets. It encourages reflection on the lessons of history and the importance of divine guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 15 <br>
+    •	Order by Revelation: 54 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 99
+    </p>
+</div>
+
+<div id="سورة النحل" class="tabcontent">
+  <h3>سورة النحل</h3>
+  <p><em>Surah An-Nahil</em>, The Surah speaks about Allah’s creative power. Surah An-Nahl explores God’s signs in creation and His abundant provision for humanity. It encourages gratitude and recognizing God’s blessings in everyday life. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 16 <br>
+    •	Order by Revelation: 70 <br>
+    •	Number of Ruku`:  16 <br>
+    •	Number of Verses: 128
+    </p>
+</div>
+
+<div id="سورة الاسراء" class="tabcontent">
+  <h3>سورة الاسراء</h3>
+  <p><em>Surah Al-Isra</em>, This Surah concentrates on some important moral and spiritual principles.  It emphasizes that human beings always need divine guidance.  Without the guidance of Allah, humans end up in evil, sin and misery. Surah Al-Isra narrates the miraculous Night Journey and Ascension of the Prophet Muhammad (peace be upon him) and emphasizes the importance of prayer, faith, and God’s guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 17 <br>
+    •	Order by Revelation: 50 <br>
+    •	Number of Ruku`:  12 <br>
+    •	Number of Verses: 111
+  </p>
+</div>
+
+<div id="سورة الكهف" class="tabcontent">
+  <h3>سورة الكهف</h3>
+  <p><em>Surah Al-Kahf</em>, it tells the story of the Companions of the Cave and explores themes of faith, knowledge, and the relentless pursuit of truth. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 18 <br>
+    •	Order by Revelation: 69 <br>
+    •	Number of Ruku`:  12 <br>
+    •	Number of Verses: 110
+    </p>
+</div>
+
+<div id="سورة مريم" class="tabcontent">
+  <h3>سورة مريم</h3>
+  <p><em>Surah Maryam</em>,The subject matter of this Surah is the true message and teachings of the Prophets of Allah.  Several Prophets are mentioned here: Zakariyya, Yahya, Isa and his mother Maryam, Ibrahim, Musa, Ismail and Idris -may the peace and blessings of Allah be upon all of them. Surah Maryam narrates the miraculous birth of Prophet Isa (Jesus) and the virtuous Maryam (Mary). It emphasizes the significance of faith, prayer, and gratitude. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 19 <br>
+    •	Order by Revelation: 44 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 98
+    </p>
+</div>
+
+<div id="سورة طه" class="tabcontent">
+  <h3>سورة طه</h3>
+  <p><em>Surrah TA-HA</em>, The subject matter of the Surah is to assure the Prophet and his followers that the message of the Qur’an will eventually succeed.  The story of Prophet Moses is mentioned in detail.  Then it is mentioned how the enemies of Islam are opposing it and what will be the consequences of this opposition for them. Surah Ta-Ha tells the compelling story of the Prophet Moses (Musa) and his mission to free the Israelites from oppression. It highlights themes of faith, perseverance, and divine support. Umar R.A read this surah before accepting Islam.<br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 20 <br>
+    •	Order by Revelation: 45 <br>
+    •	Number of Ruku`:  8 <br>
+    •	Number of Verses: 135
+    </p>
+</div>
+
+<div id="سورة الانبياء" class="tabcontent">
+  <h3>سورة الانبياء</h3>
+  <p><em>Surrah Al- Anbiya</em>, The basic theme of the Surah is Prophets and Prophethood as indicated by the name itself.  All Prophets were human beings.  They suffered at the hands of their enemies. Allah also tested them, but they always trusted Allah and lived according to His command.  They were people of prayers and devotions and Allah listened to their prayers. Surah Al-Anbiya narrates the stories of various prophets and underscores the importance of following God’s guidance and delivering His message to humanity. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong> <br>
+    •	Order in Quran: 21 <br>
+    •	Order by Revelation: 73 <br>
+    •	Number of Ruku`:  7 <br>
+    •	Number of Verses: 112
+    </p>
+</div>
+
+<div id="سورة الحج" class="tabcontent">
+  <h3>سورة الحج</h3>
+  <p><em>Surrah Al- Hajj</em>, The Surah reminds about the approaching end of the world, need for the firmness of faith to support the truth and to eradicate the evil.  It talks about prayers, humbleness and sacrifice, respect of the Ka’bah, the House of Allah, and striving to defend the truth. Surah Al-Hajj discusses the rituals and spirituality of the Hajj pilgrimage. It emphasizes the principles of unity and equality in Islam, particularly during the Hajj. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 22 <br>
+    •	Order by Revelation: 103 <br>
+    •	Number of Ruku`:  10 <br>
+    •	Number of Verses: 78
+    </p>
+</div>
+
+<div id="سورة المومنون" class="tabcontent">
+  <h3>سورة المومنون</h3>
+  <p><em>Surrah Al- Mu'minoon</em>,  It speaks about the character of true believers and assures that they will be the real successful people. Surah Al-Mu’minun outlines the characteristics of true believers and highlights the signs of God in creation as reminders of His existence and power. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 23 <br>
+    •	Order by Revelation: 74 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 118
+    </p>
+</div>
+
+<div id="سورة النور" class="tabcontent">
+  <h3>سورة النور</h3>
+  <p><em>Surrah Al- Noor</em>, This Surah contains many rules for the development of a society based on righteousness and morality. It talks about male-female relations, rules of proper dress for Muslim women, rules for the punishment of adultery and punishment of those who accuse others of adultery or fornication. Surah An-Nur addresses issues of morality, modesty, and justice, providing guidance on personal conduct and social ethics. <br> <br>
+    •	City of Revelation: <strong>Medina</strong> <br>
+    •	Order in Quran: 24 <br>
+    •	Order by Revelation: 102 <br>
+    •	Number of Ruku`:  9 <br>
+    •	Number of Verses: 64
+    </p>
+</div>
+
+<div id="سورة الفرقان" class="tabcontent">
+  <h3>سورة الفرقان</h3>
+  <p><em>Surrah Al- Furqan</em>, The Surah answers some of the objections of the non-believers against the Qur’an and the teachings of Islam.  It also presents the character of the Believers as criteria to prove the truth of Islam. Surah Al-Furqan emphasizes the clarity of God’s signs and guidance, helping believers differentiate between truth and falsehood. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 25 <br>
+    •	Order by Revelation: 42 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 77
+    </p>
+</div>
+
+<div id="سورة الشعراء" class="tabcontent">
+  <h3>سورة الشعراء</h3>
+  <p><em>Surrah Ash- Shuara</em>, The non-believers were asking for signs to prove that the Qur’an was the word of Allah.  Allah mentioned many signs both in nature and in history.  Stories of many prophets are also mentioned to indicate that all prophets presented basically the same message. Surah Ash-Shuara critiques idolatry and highlights how messages of truth can be conveyed through poetry and eloquence.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 26 <br>
+    •	Order by Revelation: 47 <br>
+    •	Number of Ruku`:  11 <br>
+    •	Number of Verses: 227
+    </p>
+</div>
+
+<div id="سورة النمل" class="tabcontent">
+  <h3>سورة النمل</h3>
+  <p><em>Surah An-Naml</em>, narrates the story of Prophet Solomon (Sulaiman) and the ant, drawing lessons in wisdom and humility. The theme of the Surah is divine guidance in history. Allah sent His Prophets to different people. Some accepted them and were guided, while others denied them and they saw the consequences of their denial.  The Surah also contrasts between the principles of tawhid and shirk. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 27 <br>
+    •	Order by Revelation: 48 <br>
+    •	Number of Ruku`:  7 <br>
+    •	Number of Verses: 93
+    </p>
+</div>
+
+<div id="سورة القصص" class="tabcontent">
+  <h3>سورة القصص</h3>
+  <p><em>Surah Al-Qasas</em>, The basic theme of this Surah is the prophethood. Some aspects of the life of Prophet Moses -peace be upon him- are mentioned to show the similarity between him and Prophet Muhammad –peace be upon all the prophets of Allah. There are also answers here to the questions and doubts that were raised by some non-believers. Surah Al-Qasas recounts stories of ancient civilizations and their fates, offering lessons in justice and mercy. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 28 <br>
+    •	Order by Revelation: 49 <br>
+    •	Number of Ruku`:  9 <br>
+    •	Number of Verses: 88
+    </p>
+</div>
+
+<div id="سورة العنكبوت" class="tabcontent">
+  <h3>سورة العنكبوت</h3>
+  <p><em>Surah Al-Ankaboot</em>, This Surah reminds the Believers to be strong in their faith and not to give up their faith because of hardship or family pressures.  Stories of previous Prophets and their followers are also mentioned here to show that the path of truth is not an easy path.  It has trials and hardships. Surah Al-Ankabut invites readers to recognize God’s signs in creation and emphasizes the importance of patience in times of adversity. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 29 <br>
+    •	Order by Revelation: 85 <br>
+    •	Number of Ruku`:  7 <br>
+    •	Number of Verses: 69
+    </p>
+</div>
+
+<div id="سورة الروم" class="tabcontent">
+  <h3>سورة الروم</h3>
+  <p><em>Surah Al-Room</em>, The Surah reminds us that Allah is in control of everything. Those who are short sighted they see only what is apparent but they do not realize that there is a Creator and Master of this whole universe and it is He who is governing everything. Final decision is in Allah’s hand.  The Akhirah will take place and the truth will prevail. Surah Ar-Rum discusses the historical significance of the Romans and how divine support can be a source of strength for believers. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 30 <br>
+    •	Order by Revelation: 84 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 60
+    </p>
+</div>
+
+<div id="سورة لقمان" class="tabcontent">
+  <h3>سورة لقمان</h3>
+  <p><em>Surah Luqman</em>, In this Surah Tawhid is emphasized and Shirk and its ideas are critically examined.  It tells us that those who are following Shirk they are only blindly following their forefathers. The true wisdom is to believe in Allah.  The advises of Luqman the wise are also given here to support the same principles. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 31 <br>
+    •	Order by Revelation: 57 <br>
+    •	Number of Ruku`:  4 <br>
+    •	Number of Verses: 34
+    </p>
+</div>
+
+<div id="سورة السجدة" class="tabcontent">
+  <h3>سورة السجدة</h3>
+  <p><em>Surah As-Sajda</em>, The Surah discusses some of the doubts and arguments of the non-believers against the principles of Tawhid, Risalah and Akhirah.  It invites human beings to think and reflect on their own selves and on the nature surrounding them.  Every thing points that there is a Wise and Powerful Creator for this universe. He has not created all this phenomenon in vain. The creation has a purpose. Surah As-Sajda encourages reflection and submission to God’s guidance, highlighting the significance of prostration as a symbol of worship. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>                <br>
+    •	Order in Quran: 32 <br>
+    •	Order by Revelation: 75 <br>
+    •	Number of Ruku`:  3 <br>
+    •	Number of Verses: 30
+    </p>
+</div>
+
+<div id="سورة الاحزاب" class="tabcontent">
+  <h3>سورة الاحزاب</h3>
+  <p><em>Surah Al-Ahzab</em>, The Surah deals with a number of social and political issues.  It talks about the practice of child-adoption, some marriage customs, battle of Ahzab and Bani Quraizah, social issues related to Hijab of Muslim women.  It also talks about the hypocrites and their conduct in the society. Surah Al-Ahzab recounts lessons from the Battle of the Trench and provides social and moral guidelines for the community. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>     <br>
+    •	Order in Quran: 33 <br>
+    •	Order by Revelation: 90 <br>
+    •	Number of Ruku`:  9 <br>
+    •	Number of Verses: 73
+    </p>
+</div>
+
+<div id="سورة سباء" class="tabcontent">
+  <h3>سورة سباء</h3>
+  <p><em>Surah Saba</em>, narrates the story of the Queen of Sheba and underscores God’s signs in nature and history. The Surah answers some of the objections raised by the non-believers about Tawhid, Risalah and Akhirah.  It also speaks about Prophets David and Solomon and the Queen of Sheba to remind people about the consequences of evils as well as righteousness. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>     <br>
+    •	Order in Quran: 34 <br>
+    •	Order by Revelation: 58 <br>
+    •	Number of Ruku`:  6 <br>
+    •	Number of Verses: 54
+    </p>
+</div>
+
+<div id="سورة فاطر" class="tabcontent">
+  <h3>سورة فاطر</h3>
+  <p><em>Surah Fatir</em>,In this Surah Allah warns the non-believers on their negative attitude towards Islam and Prophet Muhammad -peace be upon him.  The basic message is also explained to them. Allah has power to remove you and bring another group in your place.  Every people had a Warner. Surah Fatir reflects on the creation and Creator, encouraging acknowledgment of God’s majesty and power. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>     <br>
+    •	Order in Quran: 35 <br>
+    •	Order by Revelation: 43 <br>
+    •	Number of Ruku`:  5 <br>
+    •	Number of Verses: 45
+    </p>
+</div>
+
+<div id="سورة يٰسٰن" class="tabcontent">
+  <h3>سورة يٰسٰن</h3>
+  <p><em>Surah Ya-Sin</em>, The Surah is often referred to as the “Heart of the Quran.” It narrates the story of the people of a town visited by messengers and emphasizes the truth of divine revelation. The Surah explains some of the basic beliefs of Islam, especially the belief in life after death and the Akhirah. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>     <br>
+    •	Order in Quran: 36 <br>
+    •	Order by Revelation: 41 <br>
+    •	Number of Ruku`:  5 <br>
+    •	Number of Verses: 83
+    </p>
+</div>
+
+<div id="سورة الصافٰات" class="tabcontent">
+  <h3>سورة الصافٰات</h3>
+  <p><em>Surah As-Saaffat</em>, The Surah speaks about the unity of Allah in very strong terms.  It talks about the teachings of various prophets of Allah.  All of them preached the same message.  It gives warnings to the non-believers that their plots against the message of Islam will not work.  The truth will prevail.
+    How Prophet Yunus was delivered from the belly of the whale. Surah As-Saffat describes the angels’ role in maintaining the order of the universe and highlights the concept of resurrection and accountability. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 37 <br>
+    •	Order by Revelation: 56 <br>
+    •	Number of Ruku`:  5 <br>
+    •	Number of Verses: 182
+    </p>
+</div>
+
+<div id="سورة ص" class="tabcontent">
+  <h3>سورة ص</h3>
+  <p><em>Surah Sad</em>, The Surah talks about the basic message of all the Prophets and Messengers of Allah.  They came to preach Tawhid. The Prophet suffered and went through a lot of hardship in presenting Allah’s message.  Their enemies attacked them and persecuted them, but then finally it was the truth that prevailed and falsehood was defeated.  Power and riches all come from Allah.  Some people become arrogant when they have power.  But Allah gave the examples of David and Solomon who were great prophets as well as powerful kings. They obey Allah. Their riches did not corrupt them. Surah Sad tells the story of Prophet David (Dawud) and his wisdom, addressing themes of gratitude and steadfastness. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 38 <br>
+    •	Order by Revelation: 38 <br>
+    •	Number of Ruku`:  5 <br>
+    •	Number of Verses: 88
+    </p>
+</div>
+
+<div id="سورة الزمر" class="tabcontent">
+  <h3>سورة الزمر</h3>
+  <p><em>Surah Az-Zumar</em>, The Surah talks about the true religion. It is to serve Allah sincerely and to avoid Shirk.  Tawhid brings the blessings of Allah, while Shirk has terrible consequences.  The Believers are told not to despair and lose heart.  If it is difficult for them to practice their religion in one place, they can migrate from that land.  The unbelievers are told that they can do whatever they wish, but they cannot turn the Believers away from the path of faith. Surah Az-Zumar emphasizes the consequences of belief and disbelief, encouraging individuals to turn to God in repentance and engage in worship. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran 39 <br>
+    •	Order by Revelation: 59 <br>
+    •	Number of Ruku`: 8 <br>
+    •	Number of Verses: 75
+    </p>
+</div>
+
+<div id="سورة غافر" class="tabcontent">
+  <h3>سورة غافر</h3>
+  <p><em>Surah Al-Ghafir</em>, These are Surahs of Da’wah, inviting people to believe in Allah, take advantage of the mercy of Allah.  There is solace and comfort in these Surahs for the Believers who were persecuted because of their faith and they are given the good news that the truth will prevail. Surah Ghafir highlights the importance of acknowledging God’s signs in creation and narrates stories of past prophets and their struggles. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 40 <br>
+    •	Order by Revelation: 60 <br>
+    •	Number of Ruku`: 9 <br>
+    •	Number of Verses: 85
+    </p>
+</div>
+
+<div id="سورة فصّلت" class="tabcontent">
+  <h3>سورة فصّلت</h3>
+  <p><em>Surah Fussilat</em>, The subject matter of this Surah is Da’wah. It invites to the truth, gives warnings to those who reject the truth, and tells us that the appeal to the truth is within our nature.  It tells us also that the Believers receive strength from Allah’s revelation.  The revelation gives life to those who were spiritually and morally dead at one time.  The Surah contains both good news and warnings. Surah Fussilat invites contemplation of God’s creation and addresses the role of messengers in delivering divine messages to humanity. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 41 <br>
+    •	Order by Revelation: 61 <br>
+    •	Number of Ruku`: 6 <br>
+    •	Number of Verses: 54
+    </p>
+</div>
+
+<div id="سورة الشوريٰ" class="tabcontent">
+  <h3>سورة الشوريٰ</h3>
+  <p><em>Surah Ash-Shura</em>, The Surah emphasizes that the message of the Qur’an is from Allah Who revealed similar messages to other Prophets and Messengers.  The religion of Allah has been the same throughout history.  If Allah wanted He would have made all people into one Ummah, but He has given freedom to people to make their own choice by their free will. Allah will judge all people on the Day of Judgment. In the Surah it is also mentioned that the followers of this message are those who avoid major sins and who manage their affairs with mutual consultation. Surah Ash-Shura discusses the importance of consultation (shura) in decision-making and encourages unity and understanding among believers. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 42 <br>
+    •	Order by Revelation: 62 <br>
+    •	Number of Ruku`: 5 <br>
+    •	Number of Verses: 53
+    </p>
+</div>
+
+<div id="سورة الزّخرف" class="tabcontent">
+  <h3>سورة الزّخرف</h3>
+  <p><em>Surah Az-Zukhruf</em>, The Surah tells us that the revelation is a mercy from Allah. Allah chooses whosoever He wills to give His revelation.  The worldly goods and riches do not necessarily mean that a person is best in the sight of Allah.  The real value comes from following the truth and righteousness. Surah Az-Zukhruf reflects on the beauty and diversity of God’s creation, critiques idolatry, and emphasizes the importance of monotheism. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 43 <br>
+    •	Order by Revelation: 63  <br>
+    •	Number of Ruku`: 7  <br>
+    •	Number of Verses: 89
+    </p>
+</div>
+
+<div id="سورة الدّخان" class="tabcontent">
+  <h3>سورة الدّخان</h3>
+  <p><em>Surah Ad-Dukhan</em>, The Surah warns about the punishment of Allah. When the punishment will come then no one can avert it.  The division between the righteous and wicked in the Hereafter will be the final decision of Allah. Surah Ad-Dukhan addresses the consequences of disbelief and encourages individuals to seek God’s mercy through faith and obedience. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 44  <br>
+    •	Order by Revelation: 64  <br>
+    •	Number of Ruku`: 3  <br>
+    •	Number of Verses: 59
+    </p>
+</div>
+
+<div id="سورة الجاثية" class="tabcontent">
+  <h3>سورة الجاثية</h3>
+  <p><em>Surah Al-Jathiya</em>, The Surah warns those who deny the Divine truth.  It talks about human arrogance and sinfulness. The judgment of Allah will cover all the people.  The nations will stand before him in the kneeling condition. Surah Al-Jathiya highlights the signs of God’s existence and power in creation and emphasizes the importance of reflection and gratitude. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 45  <br>
+    •	Order by Revelation: 65  <br>
+    •	Number of Ruku`: 4  <br>
+    •	Number of Verses: 37
+    </p>
+</div>
+
+<div id="سورة الأحقاف" class="tabcontent">
+  <h3>سورة الأحقاف</h3>
+  <p><em>Surah Al-Ahqaaf</em>, The Surah gives warnings to those who deny the truth. When Allah’s punishment comes then neither the sea, nor the dry land can protect.  There is a reference in this Surah to the people of ‘Ad and Allah’s punishment for their sins. Surah Al-Ahqaf narrates stories of past prophets and their communities, encouraging patience and reliance on God’s guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>  <br>
+    •	Order in Quran: 46  <br>
+    •	Order by Revelation: 66  <br>
+    •	Number of Ruku`: 4  <br>
+    •	Number of Verses: 35
+    </p>
+</div>
+
+<div id="سورة محمّد" class="tabcontent">
+  <h3>سورة محمّد</h3>
+  <p><em>Surah Muhammad</em>, Those who believe in Prophet Muhammad their sins are removed and their condition will improve.  The opponents of the truth will perish.
+    Precursor to Badr: The Surah talks about the real struggle that will take place between the truth and falsehood.  In this struggle the truth will be victorious and the falsehood and its votaries will be utterly defeated.  The separation will take place between those who believe and those who will deny the truth.
+    Surah Muhammad addresses the challenges faced by the early Muslim community and emphasizes the importance of faith and steadfastness. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>    <br>
+    •	Order in Quran: 47  <br>
+    •	Order by Revelation: 95  <br>
+    •	Number of Ruku`:  4  <br>
+    •	Number of Verses: 38
+    </p>
+</div>
+
+<div id="سورة الفتح" class="tabcontent">
+  <h3>سورة الفتح</h3>
+  <p><em>Surah Al-Fath</em>, After Hudaibiyah: The Surah talks about the moral and physical victory of Islam over the forces of unbelief.  The hypocrites and disbelievers will be disappointed with this victory. Surah Al-Fath recounts the Treaty of Hudaybiyyah and its significance in establishing peace and emphasizing the triumph of God’s guidance over obstacles. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>    <br>
+    •	Order in Quran: 48  <br>
+    •	Order by Revelation: 111  <br>
+    •	Number of Ruku`:  4  <br>
+    •	Number of Verses: 29
+    </p>
+</div>
+
+<div id="سورة الحجرات" class="tabcontent">
+  <h3>سورة الحجرات</h3>
+  <p><em>Surah Al-Hujraat</em>, The purpose of the Surah is to give Muslims teachings about the social manners.  How to respect their leader the Prophet -peace be upon him- and how to deal with each other.  It has comprehensive guidelines to make a peaceful and harmonious society. Surah Al-Hujurat provides guidelines for ethical conduct and social harmony among believers. It emphasizes the importance of effective communication and avoiding baseless suspicion. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>    <br>
+    •	Order in Quran: 49  <br>
+    •	Order by Revelation: 106  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses: 18
+    </p>
+</div>
+
+<div id="سورة قٰ" class="tabcontent">
+  <h3>سورة قٰ</h3>
+  <p><em>Surah Qaf</em>, The Surah emphasizes the theme of resurrection (new concept for people of Makkah) and the ultimate success of those who have faith in Allah and His Prophets. Surah Qaf invites contemplation of life’s purpose and the Hereafter, emphasizing the signs of God’s power evident in creation. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>    <br>
+    •	Order in Quran: 50  <br>
+    •	Order by Revelation: 34  <br>
+    •	Number of Ruku`:  3  <br>
+    •	Number of Verses: 45
+    </p>
+</div>
+
+<div id="سورة الذّاريٰات" class="tabcontent">
+  <h3>سورة الذّاريٰات</h3>
+  <p><em>Surah Adh-Dhariyat</em>, Surah discusses the creation of the universe and the purpose of life, encouraging individuals to acknowledge God’s blessings. The Surah gives the good news of the emergence of a new community. It also warns the opponents of the truth that their time is about to end and the judgment of Allah is near. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>    <br>
+    •	Order in Quran: 51  <br>
+    •	Order by Revelation: 67  <br>
+    •	Number of Ruku`:  3  <br>
+    •	Number of Verses: 60
+    </p>
+</div>
+
+<div id="سورة الطّور" class="tabcontent">
+  <h3>سورة الطّور</h3>
+  <p><em>Surah At-Tur</em>, The Surah speaks about the mission of Prophet Muhammad -peace be upon him.  He came to warn people about the consequences of their denial of faith and deeds of injustice and indecency. Those who are in doubt of his message let them produce a similar message.  Let them also produce any proofs supporting their wrong beliefs. Surah At-Tur reflects on the divine messages conveyed through prophets and encourages recognition of God’s mercy and guidance. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>    <br>
+    •	Order in Quran: 52  <br>
+    •	Order by Revelation: 76  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  49
+    </p>
+</div>
+
+<div id="سورة النّجم" class="tabcontent">
+  <h3>سورة النّجم</h3>
+  <p><em>Surah An-Najm</em>, The Surah highlights the miraculous journey of the Prophet Muhammad (peace be upon him) to the heavens and emphasizes the unity of God’s message throughout history. The Surah talks about the eminence of the Prophet -peace be upon him- with his Mi’raj and closeness to Allah.  It warns the disbelievers about the errors of their attitude towards the Qur’an and the Prophet of Allah.  Some of their wrong beliefs in the angels as daughters of God, intercession of the angels etc. are also mentioned. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>    <br>
+    •	Order in Quran: 53  <br>
+    •	Order by Revelation: 23  <br>
+    •	Number of Ruku`:  3  <br>
+    •	Number of Verses:  62
+    </p>
+</div>
+
+<div id="سورة القمر" class="tabcontent">
+  <h3>سورة القمر</h3>
+  <p><em>Surah Al-Qamar</em>, The Surah narrates the stories of past prophets and the consequences faced by their communities, emphasizing the significance of divine guidance. The Surah talks about the approaching Day of Judgment.  It describes some of the scenes of that Day.  It also tells us that Allah’s judgment may come here and now.  There are references to the flood that came at the time of Prophet Noah, the punishment of the people of ‘Ad, Thamud, People of Prophet Lot, the Pharaoh and his people.  It ends with the good news for the Believers who will be near their Lord in the gardens of bliss. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>    <br>
+    •	Order in Quran: 54  <br>
+    •	Order by Revelation: 37  <br>
+    •	Number of Ruku`:  3  <br>
+    •	Number of Verses:  55
+    </p>
+</div>
+
+<div id="سورة الرّحمٰن" class="tabcontent">
+  <h3>سورة الرّحمٰن</h3>
+  <p><em>Ar-Rahman</em>, The Surah repeatedly invokes the name of “Ar-Rahman,” the Most Merciful, encouraging gratitude for God’s blessings and reflection on His signs in creation. The Surah clearly indicates that Prophet Muhammad is Allah’s Prophet and Messenger for both human beings as well as Jinns.  Allah’s many blessings and favors are mentioned in this Surah.  Human beings and Jinn are invited to remember these favors and not to deny Allah’s blessings. 31 times we are asked which of Allah’s favors are we going to deny. <br> <br>
+•	City of Revelation: <strong>Medina</strong>      <br>
+•	Order in Quran: 55  <br>
+•	Order by Revelation: 97  <br>
+•	Number of Ruku`:  3  <br>
+•	Number of Verses:  78
+</p>
+</div>
+
+<div id="سورة الوٰقعة" class="tabcontent">
+ <h3>سورة الوٰقعة</h3>
+ <p><em>Al-Waqi’ah</em>, The Surah describes the scenes of the Day of Judgment, encouraging reflection on life’s purpose and accountability in the Hereafter. The Surah talks about the resurrection that will definitely take place. It is a fact undeniable. The human beings then will be in three different groups.(Sabekeen, Saleheen,Munar e aakhirah). The Surah then invites human beings to think about themselves and the things that they use daily and consider who created all these things. It talks about the Qur’an and its profound and consistent message and then finally reminds about death and the coming end of every being. <br> <br>
+•	City of Revelation: <Strong>Mecca</Strong>       <br>
+•	Order in Quran: 56  <br>
+•	Order by Revelation: 46  <br>
+•	Number of Ruku`:  3  <br>
+•	Number of Verses:  96
+</p>
+</div>
+
+<div id="سورة الحديد" class="tabcontent">
+  <h3>سورة الحديد</h3>
+<p><em>Al-Hadid</em>, The Surah discusses the concept of trials and tribulations in life and emphasizes the importance of faith, charity, and perseverance. The Surah was revealed during the period when the non-believers attacked the tiny Islamic State from all sides.  It encourages Muslims to make sacrifices for their faith and be aware of the non-believers as well as the hypocrites in their own ranks. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 57  <br>
+•	Order by Revelation: 94  <br>
+•	Number of Ruku`:  4  <br>
+•	Number of Verses:  29
+</p>
+</div>
+
+<div id="سورة المجادلة" class="tabcontent">
+  <h3>سورة المجادلة</h3>
+  <p><em>Al-Mujadila</em>, The Surah addresses issues of social justice and gender equity, emphasizing the resolution of disputes in accordance with Islamic principles. The Surah talks about a bad social custom by which husbands in pre-Islamic times used to oppress their wives.  Some one would call his wife “mother” and thus would separate from her, but would not give her the divorce.  Allah condemned this custom.  The Surah also speaks about the hypocrites and other non-Muslim groups in Madinah who were involved in spreading rumors against the Prophet -peace be upon him.  They are given warnings here and Muslims are urged to be alert and careful. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 58  <br>
+•	Order by Revelation: 105  <br>
+•	Number of Ruku`:  3  <br>
+•	Number of Verses:  22
+</p>
+</div>
+
+<div id="سورة الحشر" class="tabcontent">
+  <h3>سورة الحشر</h3>
+  <p><em>Al-Hashr</em>, The Surah recounts the expulsion of the Jewish tribe of Banu Nadir from Medina and emphasizes the consequences of betrayal. The Surah talks about the banishment of Bani Nadhir and secret relations between them and the hypocrites of Madinah. It Exhorts the Believers to be firm in their faith in Allah and gives some of the Beautiful Names of Allah. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 59  <br>
+•	Order by Revelation: 101  <br>
+•	Number of Ruku`:  3  <br>
+•	Number of Verses:  24
+</p>
+</div>
+
+<div id="سورة الممتحنة" class="tabcontent">
+  <h3>سورة الممتحنة</h3>
+  <p><em>Al-Mumtahina</em>, The Surah addresses the principles of diplomacy and alliances, providing guidance on interactions with non-Muslims in a multicultural society. Some rules related to women who migrated to Madinah and their husbands had not accepted Islam
+    The Surah deals with the relations of Muslims with non-Muslims. It tells Muslims on the one hand not to take the enemies of Allah as their allies and patrons, but on the other hand it tells them not to consider every non-Muslim as their enemy.
+    Do not take Allah’s and your own enemies as your patrons and allies.
+    It is allowed to have friendly relations with those non-Muslims who do not fight you in your religion and do not expel you from your lands. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 60  <br>
+•	Order by Revelation: 91  <br>
+•	Number of Ruku`:  2  <br>
+•	Number of Verses:  13
+</p>
+</div>
+
+<div id="سورة الصّف" class="tabcontent">
+  <h3>سورة الصّف</h3>
+  <p><em>As-Saff</em>, The Surah discusses the importance of unity and steadfastness among believers and emphasizes God’s support for those who uphold His message. Struggle for the Truth. The light of Islam will shine more.
+    The Surah exhorts Muslims to defend the truth.  It tells them that this may involve fighting the enemies who may come to attack Muslims.
+    The way of success for the believers is to struggle for the truth.
+    The Surah ends with the good news that the true religion will prevail in the end and Allah will give it victory. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 61  <br>
+•	Order by Revelation: 109  <br>
+•	Number of Ruku`:  2  <br>
+•	Number of Verses:  14
+</p>
+</div>
+
+<div id="سورة الجمعة" class="tabcontent">
+  <h3>سورة الجمعة</h3>
+  <p><em>Al-Jumu’ah</em>, The Surah emphasizes the significance of Friday as a holy day for Muslims and encourages gathering for the Friday congregational prayer. The Surah talks about the negligence of Bani Israel in obeying the commands of Allah and becoming too much involved in worldly matters. They only carried the Books of Allah, but failed to follow these books.  Muslims are urged to observe the Friday prayer and should not get involved in business so much as to neglect the remembrance of Allah. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 62  <br>
+•	Order by Revelation: 110  <br>
+•	Number of Ruku`:  2  <br>
+•	Number of Verses:  11
+</p>
+</div>
+
+<div id="سورة المنافقون" class="tabcontent">
+  <h3>سورة المنافقون</h3>
+  <p><em>Al-Munafiqun</em>, The Surah addresses the issue of hypocrisy within the Muslim community and encourages sincerity and genuine faith. The Surah deals with the phenomenon of hypocrisy. It criticizes hypocrisy and condemns the hypocrites. It also exhorts the Believers to be sincere in their faith and make charity. <br> <br>
+•	City of Revelation: <strong>Medina</strong>              <br>
+•	Order in Quran: 63  <br>
+•	Order by Revelation: 104  <br>
+•	Number of Ruku`:  2  <br>
+•	Number of Verses:  11
+</p>
+</div>
+
+<div id="سورة التّغابن" class="tabcontent">
+  <h3>سورة التّغابن</h3>
+  <p><em>At-Taghabun</em>, The Surah discusses the concept of divine decree and its implications for human life, emphasizing the importance of trust in God’s plan. The Surah invites to faith, obedience of Allah and good morals. It warns about the evil consequences of misdeeds and about the coming of the Day of Judgment when the real success or loss will be manifest. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>              <br>
+    •	Order in Quran: 64  <br>
+    •	Order by Revelation: 108  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  18
+    </p>
+</div>
+
+<div id="سورة الطّلٰاق" class="tabcontent">
+  <h3>سورة الطّلٰاق</h3>
+  <p><em>At-Talaq</em>, The Surah addresses matters of divorce and family law in Islam, providing guidance on the treatment of divorced women and the principles of reconciliation. The Rules of Divorce.
+    Warning to those who disobey the commands of Allah.
+    This and the following Surah al-Tahrim speak about family rules.  The spouses should follow Allah’s rules whether they have disagreement with each other or they love each other. In this Surah the proper rules of divorce are given.  Do not just say the words of divorce and separate yourself from your wives, but give them their rights. It also reminds the Believers to obey Allah and His Messenger.  Those who disobey Allah are warned the consequences of their disobedience. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>              <br>
+    •	Order in Quran: 65  <br>
+    •	Order by Revelation: 99  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  12
+    </p>
+</div>
+
+<div id="سورة التّحريم" class="tabcontent">
+  <h3>سورة التّحريم</h3>
+  <p><em>At-Tahrim</em>, The Surah discusses personal matters related to the Prophet Muhammad (peace be upon him) and emphasizes the importance of ethics and moral conduct. The Surah tells the spouses not to ignore Allah’s rules in their love for each other.  It refers to an incident that took place between the Prophet and his wives.  This incident is used to instruct the Believers to understand the nature of Halal and Haram and to understand that the success and salvation in the Hereafter will not be based on family or tribal relations, but purely on faith in Allah.
+    The rules of Allah are supreme. Save yourselves and your families from fire.
+    Allah requires true repentance. Salvation is not based on family or tribal relations but on Iman and Taqwa. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>              <br>
+    •	Order in Quran: 66  <br>
+    •	Order by Revelation: 107  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  12
+    </p>
+</div>
+
+<div id="سورة الملك" class="tabcontent">
+  <h3>سورة الملك</h3>
+  <p><em>Al-Mulk</em>, The Surah encourages reflection on the creation of the heavens and the earth, emphasizing the consequences for those who reject God’s signs in nature. It talks about the greatness of Allah and beautiful universe that He has created.  It reminds people that if they consider the laws of universe and travel in the land with open eyes, they will indeed see that this whole kingdom belongs to Allah and He controls everything. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 67  <br>
+    •	Order by Revelation: 77  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  30
+    </p>
+</div>
+
+<div id="سورة القلم" class="tabcontent">
+  <h3>سورة القلم</h3>
+  <p><em>Al-Qalam</em>, The Surah addresses the opposition faced by the Prophet Muhammad (peace be upon him) and emphasizes the importance of steadfastness and patience in adversity. The Surah tells us that the message of the Prophet is not the talk of a madman.  The writings of all scriptures bear testimony to the truth of this message.  It urges people to be charitable and help the poor and needy.  The story of the people of a garden is mentioned who wished to deny the charity to the poor and they suffered the consequence in losing everything. The Surah ends with the story of Prophet Jonah -peace be upon him. It urges the Prophet and through him his followers to continue this mission and not to give up in frustration.  The mission of Islam is for the whole world. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 68  <br>
+    •	Order by Revelation: 2  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  52
+    </p>
+</div>
+
+<div id="سورة الحاقّة" class="tabcontent">
+  <h3>سورة الحاقّة</h3>
+  <p><em>Al-Haaqqa</em>, The Surah describes the scenes of the Day of Judgment and emphasizes the accountability of individuals for their actions in this world and the Hereafter. Qayamat/Aakhirat is truth : The Surah tells about the fate of Thamud, ‘Ad, Pharaoh, other overthrown towns, the flood that came in the time of Prophet Noah. It talks about the reward of the faithful and the punishment of disbelievers. At the end it reminds the people that this message is not poetry of a poet and something made up by the Prophet himself, it is the revelation of the Lord of the worlds. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 69  <br>
+    •	Order by Revelation: 78  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  52
+    </p>
+</div>
+
+<div id="سورة المعارٰج" class="tabcontent">
+  <h3>سورة المعارٰج</h3>
+  <p><em>Al-Ma’arij</em>, The Surah discusses the concept of prayer and its significance in the life of a believer, encouraging patience and perseverance in prayer. It talks about the ways of the ascent of the Believers.  The rise of truth will be gradual, but it is sure. The Surah talks about the problems of human beings in general, but those who believe their character is different. It warns about the coming doom of the disbelievers. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 70  <br>
+    •	Order by Revelation: 79  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  44
+    </p>
+</div>
+
+<div id="سورة نوح" class="tabcontent">
+  <h3>سورة نوح</h3>
+  <p><em>Nuh</em>, The Surah narrates the story of the Prophet Noah (Nuh) and emphasizes the crucial role of prophets in guiding humanity to the right path. This Surah talks about the preaching of Prophet Noah and then his prayer for the destruction of the disbelievers.  Thus Allah’s wrath came upon them and they were all destroyed in a flood. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 71  <br>
+    •	Order by Revelation: 71  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  28
+    </p>
+</div>
+
+<div id="سورة الجنّ" class="tabcontent">
+  <h3>سورة الجنّ</h3>
+  <p><em>Al-Jinn</em>, The Surah addresses the existence of supernatural beings known as jinn and emphasizes that jinn, like humans, are accountable to God for their beliefs and actions.  The Surah gives assurance that the message of Allah will be accepted.  It talks about some Jinn (a hidden creation) who accepted the message and in this way gives a prediction that if the present people deny the message, then others, yet hidden, but they will accept this message. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 72  <br>
+    •	Order by Revelation: 40  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  28
+    </p>
+</div>
+
+<div id="سورة المزّمّل" class="tabcontent">
+  <h3>سورة المزّمّل</h3>
+  <p><em>Al-Muzzammil</em>, The Surah advises the Prophet Muhammad (peace be upon him) to devote himself to prayer and reflection during the night, highlighting the significance of night prayers. The Surah emphasized prayers and the reading of the Qur’an in prayers.  It tells the Prophet and all those who stand to preach the message of Allah to take their strength from the word of Allah.  Read the Qur’an and spend your wealth in the path of Allah. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 73  <br>
+    •	Order by Revelation: 3  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  20
+    </p>
+</div>
+
+<div id="سورة المدّثّر" class="tabcontent">
+  <h3>سورة المدّثّر</h3>
+  <p><em>Al-Muddathir</em>, The Surah continues the theme of the Prophet’s mission and opposition he faced. It emphasizes the severe consequences of rejecting God’s guidance.  The subject of this Surah is da’wah of Islam.  The Prophet and his followers are told to stand up to remove the evils and vices from the society.  It also gives the warnings of the coming doom for those who deny the truth. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 74  <br>
+    •	Order by Revelation: 4  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  56
+    </p>
+</div>
+
+<div id="سورة القيمة" class="tabcontent">
+  <h3>سورة القيمة</h3>
+  <p><em>Al-Qiyamah</em>, The Surah discusses the concept of resurrection and the Day of Judgment, emphasizing the accountability of every individual for their actions. The Surah talks about the spiritual resurrection of the soul when it becomes aware of its Lord and it speaks about the physical resurrection that will take place at the end of the world. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 75  <br>
+    •	Order by Revelation: 31  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  40
+    </p>
+</div>
+
+<div id="سورة الانسان" class="tabcontent">
+  <h3>سورة الانسان</h3>
+  <p><em>Al-Insan</em>, The Surah narrates stories of the righteous and their rewards in Paradise, encouraging acts of charity, kindness, and gratitude. Reminder to man on how he came into existance. It speaks about the ways human being can attain growth and spiritual development.  The rewards of the Believers and the character of the Believers are also mentioned. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>       <br>
+    •	Order in Quran: 76  <br>
+    •	Order by Revelation: 98  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  31
+    </p>
+</div>
+
+<div id="سورة المرسلات" class="tabcontent">
+  <h3>سورة المرسلات</h3>
+  <p><em>Al-Mursalat</em>, The Surah describes the messengers and their missions, emphasizing the signs of God’s existence and power evident in creation and revelation. In the previous Surah it was mentioned how the Believers receive the moral and spiritual perfection, now in this Surah it is mentioned how the rejecters of the truth have their downfall and are destroyed. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 77  <br>
+    •	Order by Revelation: 33  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  50
+    </p>
+</div>
+
+<div id="سورة النّباء" class="tabcontent">
+  <h3>سورة النّباء</h3>
+  <p><em>An-Naba</em>, The Surah discusses the Day of Judgment and its signs, encouraging reflection on the purpose of life and the consequences in the Hereafter. The Surah gives an important news or message.  It tells us that the Day of Decision is coming. This beautiful and orderly universe is pointing to the Day of Decision. Allah will bring all people to judgment.  The wicked will be thrown in the hell and the righteous will receive their reward from Allah. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 78  <br>
+    •	Order by Revelation: 80  <br>
+    •	Number of Ruku`:  2  <br>
+    •	Number of Verses:  40
+    </p>
+</div>
+
+<div id="سورة النّازعات" class="tabcontent">
+  <h3>سورة النّازعات</h3>
+  <p><em>An-Nazi’at</em>, The Surah describes the events of the Day of Resurrection, emphasizing the reality of the Hereafter and the accountability of every soul. It speaks about Allah’s angels who take the souls at the time of death. As Allah has power to take away the souls, as He has created the whole universe, He also has the power to resurrect people after their death. The story of Prophet Moses and Pharaoh is mentioned to warn the people about the consequences of arrogant pride which leads to the denial of the truth. <br> <br>
+•	City of Revelation: <Strong>Mecca</Strong>       <br>
+•	Order in Quran: 79  <br>
+•	Order by Revelation: 81  <br>
+•	Number of Ruku`:  2  <br>
+•	Number of Verses:  46
+</p>
+</div>
+
+<div id="سورة عبس" class="tabcontent">
+  <h3>سورة عبس</h3>
+  <p><em>Abasa</em>, The Surah recounts the incident of the Prophet Muhammad (peace be upon him) admonishing a blind man and emphasizes the importance of equal treatment and respect for all. The Surah begins with the incident of a blind man (Abdullah ibn Umm Maktum) who came to the Prophet to seek knowledge, while the chiefs of Makkah were denying the message. It talks about the greatness of Allah’s message.  Those who will accept this message they will benefit from it.  But those who deny this message they are bringing harm to their own selves. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 80  <br>
+    •	Order by Revelation: 24  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  42
+    </p>
+</div>
+
+<div id="سورة التّكوير" class="tabcontent">
+  <h3>سورة التّكوير</h3>
+  <p><em>At-Takwir</em>, The Surah describes cosmic events signaling the end of the world and emphasizes the reality of the Day of Judgment. The Surah talks about the end of the world.  In a very powerful way, it gives us some of the scenes of the Last Day. All the natural power as well as the human power and authority will come to an end.  This is a serious message not the words of a madman.  The purpose of this message is to remind people to become morally upright. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 81  <br>
+    •	Order by Revelation: 7  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  29
+    </p>
+</div>
+
+<div id="سورة الأنفطار" class="tabcontent">
+  <h3>سورة الأنفطار</h3>
+  <p><em>Al-Infitar</em>, The Surah discusses the resurrection and accountability of individuals, encouraging reflection on the consequences of one’s actions. The Surah reminds human being that Allah has given them a wonderful proportionate shape, but they and the whole universe are totally dependent upon Allah.  The creation has a purpose and the Day of Judgment will come. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 82  <br>
+    •	Order by Revelation: 82  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  19
+    </p>
+</div>
+
+<div id="سورة المطفّفين" class="tabcontent">
+  <h3>سورة المطفّفين</h3>
+  <p><em>Al-Mutaffifin</em>, The Surah critiques dishonest practices in trade and commerce, emphasizing the importance of honesty and fair dealings in economic transactions.  The Surah warns those who commit fraud in business. It reminds about honest dealings. The righteous will prosper. Allah has the record of every person. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 83  <br>
+    •	Order by Revelation: 86  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  36
+    </p>
+</div>
+
+<div id="سورة الأنشقاق" class="tabcontent">
+  <h3>سورة الأنشقاق</h3>
+  <p><em>Al-Inshiqaq</em>, The Surah describes the cosmic events preceding the Day of Judgment and emphasizes the inevitability of the Hereafter. This Surah tells us that this world has no permanence.  It also speaks about the record of deeds and the rewards of the righteous and the punishment of the wicked.  It reminds people to pay attention to the Qur’an. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 84  <br>
+    •	Order by Revelation: 83  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  25
+    </p>
+</div>
+
+<div id="سورة البروج" class="tabcontent">
+  <h3>سورة البروج</h3>
+  <p><em>Al-Buruj</em>, The Surah recounts the story of the people of the trench and emphasizes the severe consequences of persecution for one’s faith. The Surah speaks about the persecution of the Believers.  Allah watches over His own people and He will bring His enemies to judgment. The Surah warns the opponents of this message. Their end might be the same as that of many nations before who denied Allah’s message and persecuted the Believers. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 85  <br>
+    •	Order by Revelation: 27  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  22
+    </p>
+</div>
+
+<div id="سورة الّطٰارق" class="tabcontent">
+  <h3>سورة الّطٰارق</h3>
+  <p><em>At-Tariq</em>, The Surah reflects on the symbolism of the night-comer (Tariq) and encourages individuals to ponder the creation as a sign of God’s existence. Every thing in this universe is working under the protection and supervision of the great Keeper.  The creation of human beings as well as the creation of this universe is not a joke. The creation is a serious work of Allah and so is His word, the Qur’an. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 86  <br>
+    •	Order by Revelation: 36  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  17
+    </p>
+</div>
+
+<div id="سورة الأعلي" class="tabcontent">
+  <h3>سورة الأعلي</h3>
+  <p><em>Al-Ala</em>, The Surah highlights the creation of humanity and their potential for spiritual growth, encouraging acknowledgment of God’s favors and guidance. The Surah speaks about the praise of Allah the Most High. He created everything. He created the human being and gave him capacity to make progress. Man can make progress if he obeys Allah’s rules. The Qur’an is the message from Allah and He will guard it. The Prophet should continue giving the message to others. Those who accept it will benefit from it, but those who will reject it they will be the losers.  It talks about the ‘Akhirah and that this message is the same that was given to Prophets Ibrahim and Moses -peace be upon them. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 87  <br>
+    •	Order by Revelation: 8  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  19
+    </p>
+</div>
+
+<div id="سورة الغٰاشية" class="tabcontent">
+  <h3>سورة الغٰاشية</h3>
+  <p><em>Al-Ghashiyah</em>, The Surah describes the events of the Day of Judgment, emphasizing the accountability of every soul for their deeds. The Surah talks about the coming calamity that will cover everything.  The humanity will be divided into two groups: the frightened, tired and exhausted group, and the joyful and happy group.  Then the attention is drawn to this wonderful that Allah has created.  The Prophet is told to remind people. His mission is to remind only, not to impose the message. Allah will make the final judgment. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 88  <br>
+    •	Order by Revelation: 68  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  26
+    </p>
+</div>
+
+<div id="سورة الفجر" class="tabcontent">
+  <h3>سورة الفجر</h3>
+  <p><em>Al-Fajr</em>, The Surah reflects on the oath of dawn (Fajr) and encourages individuals to reflect on the lessons learned from the rise and fall of past civilizations. The Surah talks about the judgment of Allah: the reward and punishment that will take place in the hereafter. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 89  <br>
+    •	Order by Revelation : 10  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  30
+    </p>
+</div>
+
+<div id="سورة البلد" class="tabcontent">
+  <h3>سورة البلد</h3>
+  <p><em>Al-Balad</em>, The Surah discusses the moral and ethical values of a society, encouraging compassion, charity, and the pursuit of righteousness. The Surah begins with a reference to the city of Makkah where the Prophet was going through an experience of pain and suffering due to the denial of his people.  It talks about the different stages of human life.  This world is not the place of real comfort. Here is the test of human beings to do good deeds and then the final judgment will be in the Hereafter. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 90  <br>
+    •	Order by Revelation: 35  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  20
+    </p>
+</div>
+
+<div id="سورة الشّمس" class="tabcontent">
+  <h3>سورة الشّمس</h3>
+  <p><em>Ash-Shams</em>, The Surah reflects on the symbolism of the sun and the soul, emphasizing the consequences of righteousness and corruption. The Surah tells us that as there is a contrast between sun and moon, night and day, heaven and earth, so there is also a big difference between good and evil.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 91  <br>
+    •	Order by Revelation: 26  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  15
+    </p>
+</div>
+
+<div id="سورة اللّيل" class="tabcontent">
+  <h3>سورة اللّيل</h3>
+  <p><em>Al-Lail</em>, The Surah reflects on the symbolism of the night (Lail) and emphasizes the results of human effort and choices in this world and the Hereafter. It has basically the same theme as the previous Surah, but it tells us about the two ways of life: good way and evil way and the consequences of both ways.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 92  <br>
+    •	Order by Revelation: 9  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  21
+    </p>
+</div>
+
+<div id="سورة الّضحٰي" class="tabcontent">
+  <h3>سورة الّضحٰي</h3>
+  s<p><em>Adh-Dhuha</em>, The Surah comforts the Prophet Muhammad (peace be upon him) during a period of hardship, emphasizing the concept of God’s favor and blessings in one’s life. This Surah gives the message of hope and consolation.  It reminds about Allah’s blessings and the way the Believers should take these blessings.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 93  <br>
+    •	Order by Revelation: 11  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  11
+    </p>
+</div>
+
+<div id="سورة الأنشراح" class="tabcontent">
+  <h3>سورة الأنشراح</h3>
+  <p><em>Ash-Sharh</em>, The Surah offers reassurance to the Prophet Muhammad (peace be upon him) and encourages patience and gratitude to God during times of trials and difficulties. The Surah tells us that the Believers should not give up under difficulties and stress. There will be ease after difficulties.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 94  <br>
+    •	Order by Revelation: 12  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  8
+    </p>
+</div>
+
+<div id="سورة التّين" class="tabcontent">
+  <h3>سورة التّين</h3>
+  <p><em>At-Tin</em>, The Surah reflects on the symbolism of the fig, olive, and Mount Sinai, emphasizing the potential for human degradation or elevation based on one’s actions. Oath of 4 things related to 4 prophets.
+    Allah has Created Man In Best Shape, But Man Has Capacities To Make Himself The Highest In Character Or The Lowest. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 95  <br>
+    •	Order by Revelation: 28  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  8
+    </p>
+</div>
+
+<div id="سورة العلق" class="tabcontent">
+  <h3>سورة العلق</h3>
+  <p><em>Al-Alaq</em>, The Surah describes the initial revelation of the Quran to the Prophet Muhammad (peace be upon him), emphasizing the importance of seeking knowledge and approaching God with humility. The first five verses are among the first that were revealed to the Prophet -peace be upon him- in the cave of Hira.  The Surah speaks about the humble beginning of human beings, but the high position that they can receive if they follow the message of Allah. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 96  <br>
+    •	Order by Revelation: 1  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  19
+    </p>
+</div>
+
+<div id="سورة القدر" class="tabcontent">
+  <h3>سورة القدر</h3>
+  <p><em>Al-Qadr</em>, The Surah reflects on the significance of the Night of Decree (Laylat al-Qadr) in the last ten nights of Ramadan, highlighting the unique power and blessings of this night. The Surah talks about the majesty and glory of the Qur’an and the time in which  the Qur’an was revealed. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 97  <br>
+    •	Order by Revelation: 25  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  5
+    </p>
+</div>
+
+<div id="سورة البيّنة" class="tabcontent">
+  <h3>سورة البيّنة</h3>
+  <p><em>Al-Bayyina</em>, The Surah emphasizes the role of prophets and divine revelation and underscores accountability and its consequences. The Surah tells us that Prophet Muhammad came with a clear message and a Divine Book.  This Book (the Qur’an) contains the basic message of all the Prophets of Allah. It also draws attention to the different ends of those who follow the right path and those who turn away from the truth. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>       <br>
+    •	Order in Quran: 98  <br>
+    •	Order by Revelation: 100  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  8
+    </p>
+</div>
+
+<div id="سورة الزّلزلة" class="tabcontent">
+  <h3>سورة الزّلزلة</h3>
+  <p><em>Az-Zalzalah</em>, The Surah encourages reflection on the Day of Judgment and emphasizes accountability and divine justice. This Surah talks about the life after death and that all deeds will be exposed on the Day of Judgment. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>       <br>
+    •	Order in Quran: 99  <br>
+    •	Order by Revelation: 93  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  8
+    </p>
+</div>
+
+<div id="سورة العاديات" class="tabcontent">
+  <h3>سورة العاديات</h3>
+  <p><em>Al-Adiyat</em>, The Surah reflects on human ingratitude and lessons from history, emphasizing the importance of gratitude and faith. The Surah tells us the ungratefulness of man and where it leads him.  It describes the wild and unruly life style of the Arabs before Islam.  It also reminds us that Allah is aware of all the hidden secrets of human souls and He will expose them on the Day of Judgment. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 100  <br>
+    •	Order by Revelation: 14  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  11
+    </p>
+</div>
+
+<div id="سورة القارعة" class="tabcontent">
+  <h3>سورة القارعة</h3>
+  <p><em>Al-Qari’ah</em>, The Surah reflects on the Day of Judgment and emphasizes the accountability of individuals for their deeds. Talks about Azeem hadsa ( Qayamat). It will be the day of great clamor. People will be scattered( Ghabrahat) and the mountains will crumble( reza reza). This surah informs that deeds will be weighed on this day. Only those whose balance will be weighty will prosper. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 101  <br>
+    •	Order by Revelation: 30  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  11
+    </p>
+</div>
+
+<div id="سورة التّكاثر" class="tabcontent">
+  <h3>سورة التّكاثر</h3>
+  <p><em>At-Takathur</em>, The Surah encourages reflection on materialism and worldly competition, emphasizing the transitory nature of worldly pursuits.  The Surah talks about the evil consequences of materialism and this worldliness(Duniya Parasti).
+    Everyone is chasing worldly gains. Man is warned that all blessings are azmaish and man will be asked about how he used each blessings. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 102  <br>
+    •	Order by Revelation: 16  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  8
+    </p>
+</div>
+
+<div id="سورة العصر" class="tabcontent">
+  <h3>سورة العصر</h3>
+  <p><em>Al-Asr</em>, The Surah emphasizes the value of time and highlights the importance of faith, righteous deeds, and patience. The Surah tells us that human beings are generally losers.  Then it says what is the way to success and salvation. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 103  <br>
+    •	Order by Revelation: 13  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  3
+    </p>
+</div>
+
+<div id="سورة الهمزة" class="tabcontent">
+  <h3>سورة الهمزة</h3>
+  <p><em>Al-Humazah</em>, The Surah critiques slander and backbiting, emphasizing the severe consequences of malicious behavior. The Surah talks about some of the moral problems that affect the wealthy and then it gives them warnings of the consequences of these evils. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 104  <br>
+    •	Order by Revelation: 32  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  9
+    </p>
+</div>
+
+<div id="سورة الفيل" class="tabcontent">
+  <h3>سورة الفيل</h3>
+  <p><em>Al-Fil</em>, The Surah commemorates the story of the Elephant, highlighting God’s protection of the Kaaba in Mecca. The Surah reminds about the event when the Ka’bah was attacked by an army from the Southern part of Arabia, but Allah destroyed this army. It is the same God who protected the Ka’bah, His message is now presented by Prophet Muhammad –peace be upon him. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 105  <br>
+    •	Order by Revelation: 19  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  5
+    </p>
+</div>
+
+<div id="سورة قريش" class="tabcontent">
+  <h3>سورة قريش</h3>
+  <p><em>Quraish</em>, The Surah acknowledges God’s blessings upon the Quraish tribe and emphasizes gratitude and worship.  It reminded the people of Makkah that it was Allah who gave them honor and prestige among other tribes due to His House, the Ka’bah, so why not worship Him and obey His command.  It is similarly a reminder to others to worship Allah who provides everything. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 106  <br>
+    •	Order by Revelation: 29  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  4
+    </p>
+</div>
+
+<div id="سورة الماعون" class="tabcontent">
+  <h3>سورة الماعون</h3>
+  <p><em>Surah Al-Ma’un</em>, The Surah critiques neglecting acts of kindness and underscores the importance of caring for others, especially the less fortunate. Religion means social service, helping the poor and needy.  The Surah tells us that the true belief in God and the last day create a kind and compassionate character. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 107  <br>
+    •	Order by Revelation: 17  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  7
+    </p>
+</div>
+
+<div id="سورة الكوثر" class="tabcontent">
+  <h3>سورة الكوثر</h3>
+  <p><em>Surah Al-Kawthar</em>, The Surah emphasizes God’s abundant blessings, encouraging believers to be thankful and engage in acts of charity. The Surah gives good news and comfort that Allah’s message will prevail and the enemies of the truth will be the losers. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 108  <br>
+    •	Order by Revelation: 15  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  3
+    </p>
+</div>
+
+<div id="سورة الكافرون" class="tabcontent">
+  <h3>سورة الكافرون</h3>
+  <p><em>Surah Al-Kafirun</em>, The Surah disavows polytheism and idolatry, asserting the uncompromising belief in monotheism. The Surah tells us that there cannot be any compromise in the matters of faith and worship. People are free to follow whatever religion they want, but the truth and falsehood cannot be mixed together. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 109  <br>
+    •	Order by Revelation: 18  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  6
+    </p>
+</div>
+
+<div id="سورة النّصر" class="tabcontent">
+  <h3>سورة النّصر</h3>
+  <p><em>Surah An-Nasr</em>, The Surah commemorates the victory of Islam and invites reflection on the growth and success of the Muslim community. This is a Madani Surah and according to most of the authorities this is the last Surah that was revealed to the Prophet –peace be upon him. The Surah reminds about the attitude of the Believer in the situation of success.  One should be thankful to Allah and seek His forgiveness for any shortcomings or mistakes. <br> <br>
+    •	City of Revelation: <strong>Medina</strong>       <br>
+    •	Order in Quran: 110  <br>
+    •	Order by Revelation: 114  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  3
+    </p>
+</div>
+
+<div id="سورة المسد" class="tabcontent">
+  <h3>سورة المسد</h3>
+  <p><em>Surah Al-Masad</em>, The Surah (also known as Al-Lahab) condemns Abu Lahab and his wife and serves as a reminder of the consequences of rejecting the message of Islam. This Surah was revealed to condemn the behavior of one of the relatives of the Prophet who stood against his message.  The Surah gives a warning that those who oppose the message of Allah, they will be severely punished, regardless whether they are of the family of the Prophet or not. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 111  <br>
+    •	Order by Revelation: 6  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  5
+    </p>
+</div>
+
+<div id="سورة الأخلاٰص" class="tabcontent">
+  <h3>سورة الأخلاٰص</h3>
+  <p><em>Surah Al-Ikhlas</em>, The Surah asserts God’s absolute oneness and emphasizes His uniqueness and transcendence. This is a great Surah of Tawhid.  It speaks about the oneness of Allah.  <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 112  <br>
+    •	Order by Revelation: 22  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  4
+    </p>
+</div>
+
+<div id="سورة الفلق" class="tabcontent">
+  <h3>سورة الفلق</h3>
+  <p><em>Surah Al-Falaq</em>, The Surah is a supplication seeking refuge from evil and harm, providing protection from negative influences. The Surah reminds us that evil is lurching everywhere and any things can become harmful. One should always be conscious, do right things and seek Allah’s protection. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 113  <br>
+    •	Order by Revelation: 20  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  5
+    </p>
+</div>
+
+<div id="سورة النّاٰس" class="tabcontent">
+  <h3>سورة النّاٰس</h3>
+  <p><em>Surah An-Nas</em>, The Surah is a supplication seeking refuge from evil and mischief, offering protection from negative influences and malevolent forces. The Surah tells us that Satan is always against the human beings and he puts wrong suggestions in their minds.  We should seek Allah’s protection from Satan and his whisperings. This is a very appropriate ending for the Book of Allah. The Book of God is to provide protection from all evil and success under the guidance of Allah. <br> <br>
+    •	City of Revelation: <Strong>Mecca</Strong>       <br>
+    •	Order in Quran: 114  <br>
+    •	Order by Revelation: 21  <br>
+    •	Number of Ruku`:  1  <br>
+    •	Number of Verses:  6
+    </p>
+    <br>
+<br>
+
+</div>
+
+<div class="clearfix"></div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<br>
+<br>
+<br>
+<br>
+
+</div>
+<span></span>
+<span></span>
+<div class="footer">
+  <p>Developed by: Azam Khan, Email: azam113@gmail.com</p>
+</div>
+
+  
+<script>
+function openSurrah(evt, surrahName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(surrahName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 200px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+   
+</body>
+</html> 
