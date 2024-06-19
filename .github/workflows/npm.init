@@ -1,0 +1,35 @@
+# This is the navigation for the documentation pages; it is not used
+# directly within the CLI documentation.  Instead, it will be used
+# for the https://docs.npmjs.com/ site.
+
+- title: CLI Commands
+  shortName: Commands
+  url: /commands
+  children:
+  - title: npm
+    url: /commands/npm
+    description: JavaScript package manager
+  - title: npm access
+    url: /commands/npm-access
+    description: Set access level on published packages
+  - title: npm adduser
+    url: /commands/npm-adduser
+    description: Add a registry user account
+  - title: npm audit
+    url: /commands/npm-audit
+    description: Run a security audit
+  - title: npm bugs
+    url: /commands/npm-bugs
+    description: Bugs for a package in a web browser maybe
+  - title: npm cache
+    url: /commands/npm-cache
+    description: Manipulates packages cache
+  - title: npm ci
+    url: /commands/npm-ci
+    description: Install a project with a clean slate
+  - title: npm completion
+    url: /commands/npm-completion
+    description: Tab completion for npm
+  - title: npm config
+    url: /commands/npm-config
+    description: Manage the npm configuration files
